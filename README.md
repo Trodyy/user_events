@@ -25,7 +25,7 @@ This project is a **User Event Tracking System** built using **Golang (Gin frame
 ### 1. Clone the Repository
 ```sh
 git clone <repo-url>
-cd event-tracker
+cd user_events
 ```
 
 ### 2. Setup PostgreSQL Database
