@@ -46,14 +46,6 @@ CREATE TABLE event_types (
 );
 ```
 
-## API Endpoints
-| Method | Endpoint             | Description                 |
-|--------|----------------------|-----------------------------|
-| POST   | /users               | Create a new user          |
-| GET    | /users/:id           | Get user details           |
-| POST   | /events              | Log a new user event       |
-| GET    | /events/:user_id     | Get events for a user      |
-| GET    | /events/filter       | Filter events by criteria  |
 
 ## Setup & Run
 ### Prerequisites
@@ -92,7 +84,3 @@ docker-compose up --build
 - Add authentication using JWT
 - Implement Kafka for event streaming
 - Create a frontend dashboard for data visualization
-
-## License
-MIT License
-
