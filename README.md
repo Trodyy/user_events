@@ -16,36 +16,6 @@ This project is a **User Event Tracking System** built using **Golang (Gin frame
 - **Data Analysis**: Python (Pandas, Matplotlib)
 - **Containerization**: Docker, Docker Compose
 
-## Database Schema
-The database consists of three main tables:
-
-1. **users**: Stores user details.
-```sql
-CREATE TABLE users (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    email VARCHAR(255) UNIQUE NOT NULL,
-    created_at TIMESTAMP DEFAULT NOW()
-);
-```
-2. **user_events**: Logs user activities.
-```sql
-CREATE TABLE user_events (
-    id SERIAL PRIMARY KEY,
-    user_id INT REFERENCES users(id) ON DELETE CASCADE,
-    event_type VARCHAR(50),
-    event_data JSONB,
-    created_at TIMESTAMP DEFAULT NOW()
-);
-```
-3. **event_types**: Stores predefined event categories.
-```sql
-CREATE TABLE event_types (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(50) UNIQUE NOT NULL
-);
-```
-
 ## Setup & Run
 ### Prerequisites
 - **Golang** installed
