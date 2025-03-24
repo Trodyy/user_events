@@ -24,14 +24,14 @@ This project is a **User Event Tracking System** built using **Golang (Gin frame
 
 ### 1. Clone the Repository
 ```sh
-git clone <repo-url>
-cd event-tracker
+git clone git@github.com:Trodyy/user_events.git
+cd user_events
 ```
 
 ### 2. Setup PostgreSQL Database
 ```sh
-psql -U postgres -c "CREATE DATABASE event_tracker;"
-psql -U postgres -d event_tracker -f schema.sql
+psql -U postgres -c "CREATE DATABASE user_evnets;"
+psql -U postgres -d user_events -f schema.sql
 ```
 
 ### 3. Run the Backend Server
