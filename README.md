@@ -24,7 +24,11 @@ This project is a **User Event Tracking System** built using **Golang (Gin frame
 
 ### 1. Clone the Repository
 ```sh
+<<<<<<< HEAD
 git clone git@github.com:Trodyy/user_events.git
+=======
+git clone <repo-url>
+>>>>>>> 98ceb3d9a4a8188ac254910755b323356997bf73
 cd user_events
 ```
 
