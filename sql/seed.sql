@@ -46,8 +46,8 @@ INSERT INTO user_logs (user_id, name, page, age, duration, join_date, metadata) 
 (46, 'Katherine Morris', '/home', 26, 15, '2025-03-25 19:25:00', '{"browser": "Opera", "os": "Windows"}'),
 (47, 'Scott Rogers', '/products', 34, 125, '2025-03-25 19:30:00', '{"browser": "Brave", "os": "macOS"}'),
 (48, 'Danielle Reed', '/contact', 21, 25, '2025-03-25 19:35:00', '{"browser": "Vivaldi", "os": "Linux"}'),
-(49, 'Peter Cook', '/about', 37, 75, '2025-03-25 19:40:00', '{"browser": "Samsung Internet", "os": "Android"}'),
-(50, 'Heather Morgan', '/login', 20, 45, '2025-03-25 19:45:00', '{"browser": "UC Browser", "os": "iOS"}');
+(49, 'Peter Cook', '/about', 37, 75, '2025-03-25 19:40:00', '{"browser": "Samsung Internet", "os": "Android"}') ,
+(50, 'Heather Morgan', '/login', 20, 45, '2025-03-25 19:45:00', '{"browser": "UC Browser", "os": "iOS"}') ,
 (51, 'Liam O''Connor', '/products/tea', 29, 85, '2025-03-26 08:15:00', '{"browser": "Firefox", "os": "Linux", "country": "IE"}'),
 (52, 'Sophie Müller', '/products/coffee', 34, 120, '2025-03-26 08:20:00', '{"browser": "Chrome", "os": "Windows", "country": "DE"}'),
 (53, 'Jean Dupont', '/blog/french-cuisine', 42, 210, '2025-03-26 08:25:00', '{"browser": "Edge", "os": "Windows", "country": "FR", "lang": "fr"}'),
