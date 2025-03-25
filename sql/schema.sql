@@ -1,3 +1,4 @@
+//the core of database's table.
 CREATE TABLE user_logs (
 id SERIAL PRIMARY KEY ,
 user_id INT NOT NULL ,
@@ -8,3 +9,9 @@ duration INT ,
 join_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
 metadata JSONB
 );
+
+
+//To speed up database engine's search.
+CREATE INDEX idx_user_logs_time ON user_logs(timestamp);
+CREATE INDEX idx_user_logs_time ON user_logs(join_date);
+
