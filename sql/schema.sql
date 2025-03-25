@@ -1,4 +1,3 @@
-//the core of database's table.
 CREATE TABLE user_logs (
 id SERIAL PRIMARY KEY ,
 user_id INT NOT NULL ,
@@ -26,9 +25,9 @@ GROUP BY user_id;
 
 //MATRILIZIED VIEWS HAVE BETTER PERFORMANCE WHERE WE HAVE COMPLEX aGGREGATIONS THAT ARE EXPENSIVE TO COMPUTE.
 CREATE MATERIALIZED VIEW daily_page_views AS
-SELECT DATE(timestamp) AS date, page, COUNT(*) AS visits
+SELECT DATE(join_date) AS date, page, COUNT(*) AS visits
 FROM user_logs
-GROUP BY DATE(timestamp), page;
+GROUP BY DATE(join_date), page;
 
 
 
