@@ -38,17 +38,20 @@ CREATE TABLE user_metrics (
 );
 
 
---CREATE A FUNCTION TO COMUTE avg_time and INSERT it on user_metrics.
-CREATE OR REPLACE FUNCTION calculate_avg_time() RETURNS VOID AS $$
+--Create a function to compute avg_time and INSERT it on user_metrics.
+CREATE OR REPLACE FUNCTION calculate_avg_time()
+RETURNS TRIGGER AS $$
 BEGIN
     INSERT INTO user_metrics (user_id, avg_time)
-    SELECT user_id, AVG(duration)
+    SELECT user_id, AVG(duration)::integer
     FROM user_logs
+    WHERE duration IS NOT NULL
     GROUP BY user_id
     ON CONFLICT (user_id) DO UPDATE SET avg_time = EXCLUDED.avg_time;
+    
+    RETURN NULL;
 END;
 $$ LANGUAGE plpgsql;
-
 
 
 
@@ -57,4 +60,3 @@ CREATE TRIGGER update_avg_time
 AFTER INSERT ON user_logs
 FOR EACH STATEMENT
 EXECUTE FUNCTION calculate_avg_time();
-
