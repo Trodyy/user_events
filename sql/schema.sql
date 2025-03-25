@@ -15,3 +15,9 @@ metadata JSONB
 CREATE INDEX idx_user_logs_time ON user_logs(timestamp);
 CREATE INDEX idx_user_logs_time ON user_logs(join_date);
 
+
+
+CREATE VIEW user_activity_summary AS
+SELECT user_id, COUNT(*) AS visit_count, AVG(duration) AS avg_time
+FROM user_logs
+GROUP BY user_id;
