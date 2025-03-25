@@ -49,3 +49,13 @@ BEGIN
     ON CONFLICT (user_id) DO UPDATE SET avg_time = EXCLUDED.avg_time;
 END;
 $$ LANGUAGE plpgsql;
+
+
+
+
+//Create the trigger
+CREATE TRIGGER update_avg_time
+AFTER INSERT ON user_logs
+FOR EACH STATEMENT
+EXECUTE FUNCTION calculate_avg_time();
+
