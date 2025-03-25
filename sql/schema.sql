@@ -38,7 +38,7 @@ CREATE TABLE user_metrics (
 );
 
 
-//CREATE A FUNCTION TO COMUTE avg_time and INSERT it on user_metrics.
+--CREATE A FUNCTION TO COMUTE avg_time and INSERT it on user_metrics.
 CREATE OR REPLACE FUNCTION calculate_avg_time() RETURNS VOID AS $$
 BEGIN
     INSERT INTO user_metrics (user_id, avg_time)
