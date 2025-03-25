@@ -10,7 +10,7 @@ metadata JSONB
 );
 
 
-//To speed up database engine's search.
+--To speed up database engine's search.
 CREATE INDEX idx_user_logs_time ON user_logs(timestamp);
 CREATE INDEX idx_user_logs_time ON user_logs(join_date);
 
@@ -23,7 +23,7 @@ GROUP BY user_id;
 
 
 
-//MATRILIZIED VIEWS HAVE BETTER PERFORMANCE WHERE WE HAVE COMPLEX aGGREGATIONS THAT ARE EXPENSIVE TO COMPUTE.
+--MATRILIZIED VIEWS HAVE BETTER PERFORMANCE WHERE WE HAVE COMPLEX aGGREGATIONS THAT ARE EXPENSIVE TO COMPUTE.
 CREATE MATERIALIZED VIEW daily_page_views AS
 SELECT DATE(join_date) AS date, page, COUNT(*) AS visits
 FROM user_logs
@@ -31,7 +31,7 @@ GROUP BY DATE(join_date), page;
 
 
 
-//Create a new table to get the output of trigger.
+--Create a new table to get the output of trigger.
 CREATE TABLE user_metrics (
     user_id INT PRIMARY KEY,
     avg_time FLOAT
@@ -52,7 +52,7 @@ $$ LANGUAGE plpgsql;
 
 
 
-//Create the trigger
+--Create the trigger
 CREATE TRIGGER update_avg_time
 AFTER INSERT ON user_logs
 FOR EACH STATEMENT
