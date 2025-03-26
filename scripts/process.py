@@ -14,5 +14,6 @@ plt.xlabel("Date")
 plt.ylabel("Visits")
 plt.title("Daily Page Visits")
 plt.xticks(rotation=45)
-plt.show()
+plt.savefig('daily_visits.png', dpi=300, bbox_inches='tight')
+print("Plot saved as 'daily_visits.png'")
 
