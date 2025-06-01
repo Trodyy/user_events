@@ -1,5 +1,5 @@
 INSERT INTO user_logs (user_id, name, page, age, duration, join_date, metadata) VALUES 
-(1, 'John Smith', '/home', 28, 45, '2025-03-25 09:15:00', '{"browser": "Chrome", "os": "Windows"}'),
+(1, 'John Smith', '/home', 28, 45, '2025-03-25 09:15:00', '{"browser": "Chrome", "os": "Carryme"}'),
 (2, 'Emily Johnson', '/products', 32, 120, '2025-03-25 09:20:00', '{"browser": "Safari", "os": "macOS"}'),
 (3, 'Michael Brown', '/contact', 25, 30, '2025-03-25 09:25:00', '{"browser": "Firefox", "os": "Linux"}'),
 (4, 'Sarah Davis', '/about', 40, 90, '2025-03-25 09:30:00', '{"browser": "Edge", "os": "Windows"}'),
